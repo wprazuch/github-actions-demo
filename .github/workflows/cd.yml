@@ -35,5 +35,8 @@ jobs:
         ECR_REPOSITORY: mkt-voutopia-offline-model
         IMAGE_TAG: main
       run: |
-        DOCKER_BUILDKIT=1 docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        DOCKER_BUILDKIT=1 docker build -t main .
+      
+      # run: |
+      #   DOCKER_BUILDKIT=1 docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+      #   docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
