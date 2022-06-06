@@ -13,8 +13,7 @@ RUN apt-get update &&\
 WORKDIR /app
 
 COPY ./requirements.txt /app/requirements.txt
-RUN chmod +x ./entrypoint_setup.sh &&\
-    pip install --upgrade pip &&\
+RUN pip install --upgrade pip &&\
     pip install -r requirements.txt
 
 COPY . /app
